@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  background-image: url("../images/imagen-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  color: #ffffff;
+}
+
+.hero__eyebrow {
+  margin-bottom: 18px;
+  color: #f97316;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin-bottom: 24px;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  max-width: 650px;
+  margin-bottom: 32px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero__button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.hero__button_primary {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.hero__button_secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .hero__title {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    align-items: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero__title {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero__subtitle {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+  }
+}
