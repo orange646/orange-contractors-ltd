@@ -2,8 +2,11 @@
 @import url("../blocks/header.css");
 @import url("../blocks/nav.css");
 @import url("../blocks/hero.css");
+@import url("../blocks/section.css");
+@import url("../blocks/value.css");
 @import url("../blocks/services.css");
-@import url("../blocks/about.css");
-@import url("../blocks/contact.css");
-@import url("../blocks/footer.css");
+@import url("../blocks/why-us.css");
+@import url("../blocks/process.css");
 @import url("../blocks/projects.css");
+@import url("../blocks/testimonials.css");
+@import url("../blocks/footer.css");

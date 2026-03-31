@@ -1,0 +1,9 @@
+.value {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.value__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
