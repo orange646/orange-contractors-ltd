@@ -1,9 +1,15 @@
 .value {
-  padding: 100px 20px;
-  background-color: #ffffff;
+  padding: 90px 32px;
+  background-color: var(--color-surface);
 }
 
 .value__container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .value {
+    padding: 72px 20px;
+  }
 }

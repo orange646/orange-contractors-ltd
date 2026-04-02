@@ -1,10 +1,10 @@
 .process {
-  padding: 100px 20px;
-  background-color: #ffffff;
+  padding: 90px 32px;
+  background-color: var(--color-bg);
 }
 
 .process__container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -16,30 +16,53 @@
 }
 
 .process__step {
-  padding: 28px 24px;
-  background-color: #f8fafc;
-  border-radius: 16px;
+  padding: 28px 22px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
 .process__number {
-  display: inline-block;
-  margin-bottom: 16px;
-  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(232, 106, 31, 0.12);
+  color: var(--color-primary);
+  font-size: 15px;
   font-weight: 700;
-  color: #f97316;
 }
 
 .process__step-title {
-  margin: 0 0 12px;
-  font-size: 22px;
-  line-height: 1.2;
+  margin-top: 18px;
+  font-size: 21px;
+  line-height: 1.25;
   font-weight: 700;
-  color: #111111;
+  color: var(--color-text);
 }
 
 .process__step-text {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4b5563;
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+@media screen and (max-width: 1024px) {
+  .process__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .process {
+    padding: 72px 20px;
+  }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+  }
 }

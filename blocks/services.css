@@ -1,41 +1,48 @@
 .services {
-  padding: 100px 20px;
-  background-color: #ffffff;
+  padding: 90px 32px;
+  background-color: var(--color-bg);
 }
 
 .services__container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
 .services__grid {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  margin-top: 40px;
 }
 
 .service-card {
-  padding: 32px 24px;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  background-color: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 28px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
 }
 
 .service-card__title {
-  margin: 0 0 16px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
   font-weight: 700;
-  color: #111111;
+  color: var(--color-text);
 }
 
 .service-card__text {
-  margin: 0;
+  margin-top: 14px;
   font-size: 16px;
-  line-height: 1.6;
-  color: #4b5563;
+  line-height: 1.7;
+  color: var(--color-text-muted);
 }
 
 @media screen and (max-width: 1024px) {
@@ -46,7 +53,7 @@
 
 @media screen and (max-width: 768px) {
   .services {
-    padding: 70px 20px;
+    padding: 72px 20px;
   }
 
   .services__grid {

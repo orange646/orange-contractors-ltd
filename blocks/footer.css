@@ -1,35 +1,34 @@
 .footer {
-  padding: 100px 20px;
-  background-color: #111111;
+  padding: 90px 32px;
+  background-color: #1f252b;
 }
 
 .footer__container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 40px;
   align-items: start;
 }
 
 .footer .section__eyebrow {
-  color: #f97316;
+  color: var(--color-primary);
 }
 
 .footer__title {
-  margin: 0 0 20px;
-  font-size: 40px;
-  line-height: 1.1;
-  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 800;
   color: #ffffff;
 }
 
 .footer__text {
-  margin: 0;
-  max-width: 540px;
+  margin-top: 18px;
+  max-width: 560px;
   font-size: 18px;
-  line-height: 1.6;
-  color: #d1d5db;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer__form {
@@ -40,46 +39,49 @@
 .footer__input,
 .footer__textarea {
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 16px;
   padding: 16px 18px;
-  font: inherit;
-  color: #111111;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 12px;
-  box-sizing: border-box;
-}
-
-.footer__textarea {
-  min-height: 140px;
-  resize: vertical;
+  outline: none;
 }
 
 .footer__input::placeholder,
 .footer__textarea::placeholder {
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
 .footer__button {
-  width: fit-content;
-  padding: 16px 28px;
-  font: inherit;
+  min-height: 54px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
-  background-color: #f97316;
-  border: none;
-  border-radius: 12px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer__button:hover {
-  opacity: 0.9;
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 70px 20px;
+    padding: 72px 20px;
   }
 
   .footer__container {
@@ -87,14 +89,6 @@
   }
 
   .footer__title {
-    font-size: 30px;
-  }
-
-  .footer__text {
-    font-size: 16px;
-  }
-
-  .footer__button {
-    width: 100%;
+    font-size: 34px;
   }
 }

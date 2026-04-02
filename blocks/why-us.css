@@ -1,38 +1,54 @@
 .why-us {
-  padding: 100px 20px;
-  background-color: #f8fafc;
+  padding: 90px 32px;
+  background-color: var(--color-surface);
 }
 
 .why-us__container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
 .why-us__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
 
 .why-us__card {
-  padding: 32px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 28px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
 .why-us__title {
-  margin: 0 0 12px;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.25;
   font-weight: 700;
-  color: #111111;
+  color: var(--color-text);
 }
 
 .why-us__text {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #4b5563;
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+@media screen and (max-width: 1024px) {
+  .why-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .why-us {
+    padding: 72px 20px;
+  }
+
+  .why-us__grid {
+    grid-template-columns: 1fr;
+  }
 }
