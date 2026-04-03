@@ -54,7 +54,17 @@
           </ul>
         </nav>
 
-        <a href="#contact" class="header__quote-button">Free Estimate</a>
+        <div class="header__actions">
+          <a href="tel:15879170422" class="header__phone">Call: 587-917-0422</a>
+          <a
+            href="https://wa.me/15879170422"
+            class="header__quote-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
     </header>
 
@@ -346,14 +356,46 @@
             Tell us about your project and we’ll get back to you with a clear
             next step for your exterior repair or coating needs.
           </p>
+
+          <div class="footer__contact">
+            <p class="footer__contact-item">
+              <span class="footer__contact-label">Phone</span>
+              <a href="tel:15879170422" class="footer__contact-link">
+                587-917-0422
+              </a>
+            </p>
+
+            <p class="footer__contact-item">
+              <span class="footer__contact-label">Email</span>
+              <a
+                href="mailto:orangecontractorsltd@hotmail.com"
+                class="footer__contact-link"
+              >
+                orangecontractorsltd@hotmail.com
+              </a>
+            </p>
+
+            <p class="footer__contact-item">
+              <span class="footer__contact-label">WhatsApp</span>
+              <a
+                href="https://wa.me/15879170422"
+                class="footer__contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+              </a>
+            </p>
+          </div>
         </div>
 
-        <form class="footer__form">
+        <form id="contact-form" class="footer__form">
           <input
             type="text"
             name="name"
             class="footer__input"
             placeholder="Name"
+            required
           />
           <input
             type="tel"
@@ -366,6 +408,7 @@
             name="email"
             class="footer__input"
             placeholder="Email"
+            required
           />
           <input
             type="text"
@@ -377,13 +420,17 @@
             name="message"
             class="footer__textarea"
             placeholder="Tell us about your project"
+            required
           ></textarea>
           <button type="submit" class="footer__button">Send Request</button>
         </form>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__location">Calgary, Alberta, Canada</p>
       </div>
     </footer>
 
     <script src="./js/script.js"></script>
   </body>
 </html>
-<!-- test -->

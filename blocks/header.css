@@ -128,23 +128,54 @@
   transform: scaleX(1);
 }
 
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.header__phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(235, 120, 22, 0.18);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.header__phone:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+}
+
 .header__quote-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  padding: 0 22px;
+  padding: 0 20px;
   border-radius: 999px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-dark) 100%
-  );
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.22);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -154,7 +185,8 @@
 
 .header__quote-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.28);
+  opacity: 0.96;
 }
 
 @media screen and (max-width: 1100px) {
@@ -173,6 +205,12 @@
 
   .header__link {
     font-size: 14px;
+  }
+
+  .header__phone {
+    min-height: 40px;
+    padding: 0 14px;
+    font-size: 13px;
   }
 
   .header__quote-button {
@@ -206,8 +244,21 @@
     gap: 14px 18px;
   }
 
+  .header__actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header__phone {
+    font-size: 13px;
+    padding: 0 14px;
+  }
+
   .header__quote-button {
-    display: none;
+    min-height: 42px;
+    padding: 0 18px;
+    font-size: 13px;
   }
 }
 
@@ -256,6 +307,22 @@
   }
 
   .header__link {
+    font-size: 12px;
+  }
+
+  .header__actions {
+    gap: 10px;
+  }
+
+  .header__phone {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .header__quote-button {
+    min-height: 40px;
+    padding: 0 14px;
     font-size: 12px;
   }
 }
